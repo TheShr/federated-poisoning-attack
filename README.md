@@ -63,7 +63,8 @@ python server.py
 Output
 Accuracy vs Federated Rounds plot
 
-Clear performance degradation when malicious clients participate
+Initially, it will train normaly as poisoned = False (default)
+To train on or poison 2 (custom) of the clients set poisoned = True on server.py
 
 Expected Behavior
 No attack: Accuracy steadily increases
@@ -78,5 +79,6 @@ Security risks in Federated Learning
 Effects of poisoned clients on global models
 
 Why robust aggregation is needed
+
 
 
