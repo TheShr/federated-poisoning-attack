@@ -49,10 +49,10 @@ def load_client_data(root_dir, client_name, batch_size=32):
     X = pd.concat([pd.DataFrame(d) for d in data]).values
     y = labels
 
-    dataset = IoTDataset(X, y)
+    dataset = IoTDataset(X,y)
 
-    train_size = int(0.8 * len(dataset))
-    test_size = len(dataset) - train_size
+    train_size = int(0.8*len(dataset))
+    test_size = len(dataset) -train_size
     train_ds, test_ds = random_split(dataset, [train_size, test_size])
 
     train_loader = DataLoader(train_ds, batch_size=batch_size, shuffle=True)
@@ -62,3 +62,4 @@ def load_client_data(root_dir, client_name, batch_size=32):
     num_classes = 3
 
     return train_loader, test_loader, input_dim, num_classes
+
