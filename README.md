@@ -65,6 +65,9 @@ Output : Accuracy vs Federated Rounds plot
 Initially, model will train normaly on dataset as poisoned = False (default)
 To Poison 2 (custom) of the client set poisoned = True on server.pynb
 
+![Accuracy (poisoned = False) vs Rounds](normal.png)
+![Accuracy (poisoned = True) vs Rounds](poisoned.png)
+
 
 ## Expected Behavior
 No attack: Accuracy steadily increases
@@ -79,3 +82,4 @@ Security risks in Federated Learning
 Effects of poisoned clients on global models
 
 Why robust aggregation is needed
+
