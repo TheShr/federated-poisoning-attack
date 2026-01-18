@@ -28,23 +28,24 @@ Anomaly Detection Dataset/
 Each folder represents one federated client with its own private local data.
 ```
 ## Federated Learning Configuration
-Number of Clients: 5
+Number of Clients: 5  
 
-Malicious Clients: 2
+Malicious Clients: 2  
 
-Aggregation Algorithm: FedAvg
+Aggregation Algorithm: FedAvg  
 
-Training Rounds: 10
+Training Rounds: 10  
 
-Evaluation Metric: Accuracy
+Evaluation Metric: Accuracy  
 
-## Data Poisoning (Label Flip Attack)
-Malicious clients intentionally corrupt labels during training:
+## Data Poisoning (Label Flip Attack)  
 
-y = (y + 1) % num_classes
-This degrades the global model’s performance after aggregation.
+Malicious clients intentionally corrupt labels during training:  
 
-## Project Structure
+y = (y + 1) % num_classes  
+This degrades the global model’s performance after aggregation.  
+
+## Project Structure  
 ```text
 .
 ├── client.py        # Flower client logic
@@ -55,17 +56,23 @@ This degrades the global model’s performance after aggregation.
 ├── requirements.txt
 └── README.md
 ```
-## How to Run
-Install dependencies
-pip install flwr torch torchvision matplotlib
+## How to Run  
+Install dependencies  
+
+pip install flwr torch torchvision matplotlib 
+
 Start federated simulation
+
 python server.py
+
 Output : Accuracy vs Federated Rounds plot
 
 Initially, model will train normaly on dataset as poisoned = False (default)
+
 To Poison 2 (custom) of the client set poisoned = True on server.pynb
 
 ![Accuracy (poisoned = False) vs Rounds](normal.png)
+
 ![Accuracy (poisoned = True) vs Rounds](poisoned.png)
 
 
@@ -82,4 +89,5 @@ Security risks in Federated Learning
 Effects of poisoned clients on global models
 
 Why robust aggregation is needed
+
 
